@@ -1,0 +1,1 @@
+if(window.tailwind)tailwind.config={darkMode:'class',theme:{extend:{colors:{accent:{400:'#fb923c',500:'#f97316'}}}}}

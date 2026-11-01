@@ -1,0 +1,91 @@
+
+:root{--u:#9a8cf0;--ub:#f1edff;--ud:#5b4bc4;--st:"🐥📘✨";--ink:#4a4570}
+html[data-u="0"],a[data-u="0"],#unitList li:nth-child(1){--u:#f58fb4;--ub:#ffe9f1;--ud:#c2457a;--st:"🐰🗣️💬"}
+html[data-u="1"],a[data-u="1"],#unitList li:nth-child(2){--u:#5fcf9d;--ub:#e0f8ec;--ud:#1f8a5d;--st:"🐻🥗💚"}
+html[data-u="2"],a[data-u="2"],#unitList li:nth-child(3){--u:#6bb8f2;--ub:#e3f2ff;--ud:#2a7bc0;--st:"🐧✈️🏝️"}
+html[data-u="3"],a[data-u="3"],#unitList li:nth-child(4){--u:#a78bf0;--ub:#eee8ff;--ud:#6a4cc7;--st:"🦊🔬🧪"}
+html[data-u="4"],a[data-u="4"],#unitList li:nth-child(5){--u:#7f8cf5;--ub:#e8ebff;--ud:#4a55c9;--st:"🐱💻🤖"}
+html[data-u="5"],a[data-u="5"],#unitList li:nth-child(6){--u:#ffa77a;--ub:#fff0e6;--ud:#d0652f;--st:"🐶⚖️📏"}
+html[data-u="6"],a[data-u="6"],#unitList li:nth-child(7){--u:#f7c948;--ub:#fff7d6;--ud:#a67c00;--st:"🐯🏆⚽"}
+html[data-u="7"],a[data-u="7"],#unitList li:nth-child(8){--u:#4fc3c0;--ub:#dff7f6;--ud:#1f8a88;--st:"🐸🌍🌱"}
+html[data-u="8"],a[data-u="8"],#unitList li:nth-child(9){--u:#ff8a8a;--ub:#ffe8e8;--ud:#c94a4a;--st:"🦄🎯🚀"}
+body{font-family:'Be Vietnam Pro',system-ui,sans-serif!important}
+h1,h2,h3,h4{font-weight:800}
+html:not(.dark) body{background:color-mix(in srgb,var(--ub) 45%,#fff)!important;color:var(--ink)}
+html:not(.dark) header,html:not(.dark) #sidebar{background:#fff!important;border-color:color-mix(in srgb,var(--u) 30%,#fff)!important}
+header a.font-bold::after{content:' ✨'}
+header .w-9{border-radius:9999px!important}
+.bg-blue-600{background:var(--u)!important;color:#fff}
+.bg-orange-400{background:var(--u)!important}
+.border-l-orange-400{border-left-color:var(--u)!important}
+.text-blue-600,.text-blue-700,.text-orange-500,.text-orange-600{color:var(--ud)!important}
+.border-blue-600{border-color:var(--u)!important}
+.bg-blue-50,.hover\:bg-blue-50:hover,.bg-orange-50,.hover\:bg-orange-50:hover,.bg-orange-100{background:var(--ub)!important}
+.bg-green-50,.bg-green-100{background:#dcf7e8!important}.text-green-600,.text-green-700{color:#2f9e6b!important}
+.bg-red-100{background:#ffe1e6!important}.text-red-600,.text-red-500{color:#e5607a!important}
+.bg-amber-50{background:#fff7dc!important}
+html:not(.dark) .bg-slate-100{background:color-mix(in srgb,var(--ub) 70%,#fff)!important}
+html:not(.dark) .border-slate-200{border-color:color-mix(in srgb,var(--u) 28%,#fff)!important}
+html:not(.dark) .border-slate-300{border-color:color-mix(in srgb,var(--u) 40%,#fff)!important}
+.rounded-2xl{border-radius:1.4rem!important}.rounded-xl{border-radius:1rem!important}
+.shadow-sm{box-shadow:0 3px 0 color-mix(in srgb,var(--u) 25%,#fff)!important}
+section.rounded-3xl.bg-blue-600,div.rounded-3xl.bg-blue-600{background:var(--ub)!important;color:var(--ud)!important;border:3px solid var(--u);position:relative;overflow:hidden}
+.rounded-3xl.bg-blue-600 .text-white,.rounded-3xl.bg-blue-600 .text-blue-100,.rounded-3xl.bg-blue-600 .text-orange-300{color:var(--ud)!important}
+.stk{position:absolute;right:16px;top:6px;font-size:3.6rem;transform:rotate(10deg);filter:drop-shadow(0 3px 0 rgba(0,0,0,.08))}
+button,a.block{transition:transform .15s}
+button:not(:disabled):active{transform:scale(.96)}
+.opt.correct{background:#d8f7e4!important;border-color:#7fd8a6!important;color:#237a52!important}
+.opt.wrong{background:#ffe0e6!important;border-color:#ff9db0!important;color:#b63b57!important}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--u);outline-offset:1px}
+::selection{background:var(--ub)}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-6px) rotate(3deg)}}
+body::after{display:none;content:var(--st);position:fixed;right:14px;bottom:14px;font-size:26px;letter-spacing:4px;padding:6px 14px;background:#fff;border:3px solid var(--u);border-radius:999px;box-shadow:0 4px 0 color-mix(in srgb,var(--u) 30%,#fff);animation:bob 2.6s ease-in-out infinite;z-index:20;pointer-events:none}
+.mn-done{background:#fff;color:#2f9e6b;border:3px solid #7fd8a6}
+.mn-cur{background:var(--u);color:#fff;box-shadow:0 0 0 5px color-mix(in srgb,var(--u) 30%,#fff)}
+.mn-open{background:#fff;color:var(--ud);border:3px solid var(--u)}
+.mn-lock{background:#f1eef8;color:#b9b3cf;border:3px dashed #d9d3ea}
+.mn-l1{background:var(--u)}.mn-l0{background:#e4def2}
+h1,h2,h3,h4,button,summary,.font-bold,.font-semibold{font-family:'Be Vietnam Pro',system-ui,sans-serif}
+.rounded-2xl.border{border-width:2.5px!important;border-color:color-mix(in srgb,var(--u) 55%,#fff)!important;box-shadow:0 4px 0 color-mix(in srgb,var(--u) 32%,#fff)!important;outline:2px dashed color-mix(in srgb,var(--u) 38%,#fff);outline-offset:-8px}
+.rounded-2xl.border.border-l-4{border-left-width:7px!important}
+button.bg-blue-600,a.bg-blue-600:not(.rounded-3xl){border-radius:999px!important;box-shadow:0 4px 0 var(--ud);font-weight:700}
+button.bg-blue-600:not(:disabled):active{box-shadow:0 1px 0 var(--ud);transform:translateY(3px)}
+button.bg-blue-600:disabled{box-shadow:none}
+.h-2.rounded-full{height:14px!important;border:2.5px solid var(--u);background:#fff!important;overflow:hidden}
+.opt,button.rounded-xl.border{border-width:2.5px!important;font-weight:400!important}
+.opt[data-act="l_pick"],.opt[data-act="mc"],.opt[data-exq],.opt[data-spq],.opt[data-spms],.opt[data-gxq],.opt[data-gxta],.opt[data-exq] b,.opt[data-act="l_pick"] b,.opt[data-act="mc"] b{font-weight:400!important}
+a.flex.items-center.gap-3>span.text-2xl:first-child{background:var(--ub);width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:1.35rem;flex:none;border:2px solid var(--u)}
+#unitList a,#wbList a{border-radius:999px!important}
+header a.font-bold>span:first-child{background:var(--u)!important;box-shadow:0 3px 0 var(--ud)}
+.mascot{position:absolute;right:14px;top:8px;display:flex;align-items:flex-end;gap:6px}
+.mascot .face{font-size:4.2rem;line-height:1;animation:bob 2.6s ease-in-out infinite;filter:drop-shadow(0 4px 0 rgba(0,0,0,.08))}
+.mascot .bub{position:relative;margin-bottom:34px;padding:6px 12px;background:#fff;border:2.5px solid var(--u);border-radius:1.1rem;font:700 .8rem 'Be Vietnam Pro',sans-serif;color:var(--ud);white-space:nowrap}
+.mascot .bub::after{content:'';position:absolute;right:-8px;bottom:8px;width:12px;height:12px;background:#fff;border-right:2.5px solid var(--u);border-top:2.5px solid var(--u);transform:rotate(45deg)}
+
+
+@media(max-width:640px){.mascot .bub{display:none}.mascot .face{font-size:3.4rem}}
+
+/* sticker không đè nội dung chính */
+@media(min-width:1700px){body::after{display:block}}
+.mascot{pointer-events:none}.rounded-3xl.bg-blue-600 h1,.rounded-3xl.bg-blue-600 h1+p{padding-right:5rem}
+
+/* ===== font tiếng Việt + khoảng cách ===== */
+body{line-height:1.6;letter-spacing:0}
+h1,h2,h3,h4,.leading-tight,.leading-snug{line-height:1.4!important}
+button,.font-bold,.font-semibold,.font-medium{letter-spacing:0}
+.rounded-2xl.border.p-3{padding:1rem!important}.rounded-2xl.border.p-4{padding:1.25rem!important}.rounded-2xl.border.p-5{padding:1.5rem!important}
+.h-2.rounded-full .h-2.rounded-full{height:100%!important;border:0!important;background:var(--u)!important}
+section[data-p]>*+*{margin-top:1.25rem}
+#mission>*+*,#wbmission>*+*,#wbuoe>*+*,#wbuoe2>*+*,#wbuoe3>*+*{margin-top:1rem}
+.mt-3>.rounded-2xl.border+.rounded-2xl.border,.mt-2+.rounded-2xl.border{margin-top:.9rem}
+.opt,button.rounded-xl.border{padding-top:.65rem;padding-bottom:.65rem;line-height:1.45}
+   /* DEFAULT TEXT STYLE (toàn web): câu hỏi IN ĐẬM · lựa chọn đáp án KHÔNG in đậm */
+   p.font-medium,.qbox>p:first-child,.lqi>p:first-child{font-weight:700!important}
+   .opt,.opt.font-semibold,button.rounded-xl.border.font-semibold,button.rounded-xl.border.font-bold,button.rounded-xl.border.font-medium{font-weight:400!important}
+   button.rounded-xl.border[data-act$="_prev"]{font-weight:700!important}
+textarea,input{line-height:1.5}
+
+/* thẻ nhỏ (từ vựng…): căn giữa dọc, lề trên/dưới bằng nhau */
+.rounded-2xl.border.py-1,.rounded-2xl.border.py-2,.rounded-2xl.border.py-3{display:flex;flex-direction:column;justify-content:center;min-height:3.75rem;padding:.8rem 1.1rem!important}
+.rounded-2xl.border.py-1>p,.rounded-2xl.border.py-2>p,.rounded-2xl.border.py-3>p{margin-top:.25rem}
+.grid>.rounded-2xl.border.py-2{height:100%}

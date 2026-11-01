@@ -1,0 +1,8 @@
+[
+ {"re":"^#/","load":["unit-1"]},
+ {"re":"^#/(?:unit|lesson|check|start)/(\\d+)","load":["unit-{n1}"]},
+ {"re":"^#/start/\\d{2,}","load":["ALL"]},
+ {"re":"^#/uoe/(\\d+)/\\d+/\\d+","load":["unit-{n1}"]},
+ {"re":"^#/skills","load":["unit-5"]},
+ {"re":"^#/lms/extra","load":["extra"]}
+]

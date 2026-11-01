@@ -1,0 +1,15 @@
+
+/* Bổ trợ: phản hồi chọn rõ ràng + dễ chạm trên điện thoại */
+html{-webkit-tap-highlight-color:rgba(0,0,0,.08)}
+button,a,summary,select,[data-act]{touch-action:manipulation}
+.opt,.lvw{min-height:44px;cursor:pointer;-webkit-user-select:none;user-select:none}
+.opt.border-blue-600:not(.correct):not(.wrong){background:var(--ud)!important;border-color:var(--ud)!important;color:#fff!important;box-shadow:0 0 0 3px var(--u);transform:scale(1.03)}
+.opt.border-blue-600:not(.correct):not(.wrong)::before{content:"● "}
+.opt.correct::before{content:"✓ "}.opt.wrong::before{content:"✗ "}
+.lvw{min-height:40px}
+/* Vùng an toàn trên điện thoại (header/sidebar không bị thanh hệ thống che) */
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(4rem + env(safe-area-inset-top,0px))}
+header.fixed{top:0!important;padding-top:env(safe-area-inset-top,0px)!important;height:calc(4rem + env(safe-area-inset-top,0px))!important}
+#sidebar{top:calc(4rem + env(safe-area-inset-top,0px))!important;padding-bottom:calc(6rem + env(safe-area-inset-bottom,0px))!important;-webkit-overflow-scrolling:touch}
+#overlay{top:0!important}

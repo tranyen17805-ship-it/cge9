@@ -1,0 +1,8 @@
+
+#memeP{position:fixed;inset:0;z-index:300;display:grid;overflow:auto;background:#000b;padding:12px;animation:exmf .15s ease-out;cursor:pointer}
+#memeP .mc{display:block;width:fit-content;margin:auto;overflow:hidden;border:10px solid #3a9d5d;border-radius:26px;background:none;max-width:98vw;text-align:center;box-shadow:0 12px 50px #000a}
+#memeP.bad .mc{border-color:#e0554f;animation:exmp .3s cubic-bezier(.3,1.6,.5,1),exsh .45s .1s}
+#memeP img{display:block;margin:0 auto;max-width:100%;max-height:calc(100vh - 60px);max-height:calc(100dvh - 60px);object-fit:contain}
+@keyframes exmf{from{opacity:0}to{opacity:1}}
+@keyframes exmp{from{transform:scale(.5) rotate(-5deg)}to{transform:none}}
+@keyframes exsh{0%,100%{translate:0}20%{translate:-14px}40%{translate:14px}60%{translate:-10px}80%{translate:10px}}

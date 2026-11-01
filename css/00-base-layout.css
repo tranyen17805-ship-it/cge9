@@ -1,0 +1,7 @@
+
+#overlay{display:none}
+body.lw-on #view{cursor:help}
+@media(min-width:1024px){body.side-closed #sidebar{transform:translateX(-100%)}body.side-closed main{padding-left:0}body.side-closed #view{max-width:80rem}main{transition:padding .2s}}
+@media(max-width:1023px){#sidebar{transform:translateX(-100%)}body.menu-open #sidebar{transform:none}body.menu-open #overlay{display:block}}
+.opt.correct{background:#dcfce7;border-color:#22c55e;color:#166534}
+.opt.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}

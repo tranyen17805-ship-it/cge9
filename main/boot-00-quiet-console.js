@@ -1,0 +1,2 @@
+/* Ẩn cảnh báo "cdn.tailwindcss.com should not be used in production" khỏi bảng Console Messages */
+(function(){var w=console.warn;console.warn=function(){var a=arguments[0];if(typeof a==='string'&&a.indexOf('cdn.tailwindcss.com should not be used in production')>-1)return;return w.apply(console,arguments)}})();
