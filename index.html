@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>CGE 9 – Cambridge Global English 9</title>
+<script src="main/boot-00-quiet-console.js"></script>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="main/boot-01-tailwind-config.js"></script>
+<link rel="stylesheet" href="css/00-base-layout.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/01-theme-units.css">
+
+<link rel="stylesheet" href="css/02-lookup-words.css">
+<link rel="stylesheet" href="css/03-lms-fix.css" id="fix-lms">
+<link rel="stylesheet" href="css/04-meme-popup.css" id="ex-meme-css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 antialiased" >
+
+<header class="fixed inset-x-0 top-0 z-40 h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 flex items-center gap-3 px-4">
+  <button data-act="menu" title="Đóng/mở danh sách Unit" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-xl" aria-label="Menu">☰</button>
+  <a href="#/" class="flex items-center gap-2 font-bold"><span class="w-9 h-9 rounded-xl bg-blue-600 text-white grid place-items-center">9</span><span class="hidden sm:inline">Global English <span class="text-orange-500">9</span></span></a>
+  <nav class="hidden md:flex ml-4 gap-1 text-sm font-medium">
+    <a href="#/" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Trang chủ</a>
+    <a href="#/unit/0" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">📘 Unit</a>
+    <a href="#/lms" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">🎯 Bổ trợ LMS</a>
+    <a href="#/dashboard" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Tiến độ</a>
+  </nav>
+  <div class="ml-auto flex items-center gap-2">
+    <a href="#/unit/0" class="md:hidden px-2 text-lg" aria-label="Unit">📘</a>
+    <a href="#/lms" class="md:hidden px-2 text-lg" aria-label="Bổ trợ LMS">🎯</a>
+    <a href="#/dashboard" class="md:hidden px-2 text-lg" aria-label="Tiến độ">📊</a>
+    <button id="bkBtn" title="Sao lưu / khôi phục dữ liệu (text đã dán, tiến độ, từ đã lưu)" class="px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-semibold">💾 Sao lưu</button>
+    <button data-act="lwmode" title="Chế độ tra từ: bấm vào từ tiếng Anh để xem nghĩa và lưu từ" class="px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-semibold">🔎 Tra từ</button>
+    <button id="sndBtn" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-lg" aria-label="Âm thanh">🔊</button>
+    <button data-act="theme" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-lg" aria-label="Dark mode">🌓</button>
+  </div>
+</header>
+
+<div id="overlay" data-act="menu" class="fixed inset-0 z-30 bg-black/40"></div>
+<aside id="sidebar" class="fixed top-16 bottom-0 left-0 z-30 w-72 overflow-y-auto bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700 p-4 transition-transform duration-200 lg:translate-x-0">
+  <p class="px-2 mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Unit · Learner's Book &amp; Work book</p>
+  <ul id="unitList" class="space-y-1 text-sm"></ul>
+  <p class="px-2 mt-6 mb-2 pt-4 border-t border-slate-200 dark:border-slate-700 text-xs font-semibold uppercase tracking-wider text-slate-400">Bổ trợ vins.lms</p>
+  <ul id="wbList" class="space-y-1 text-sm"></ul>
+</aside>
+
+<main class="pt-16 lg:pl-72 min-h-screen flex flex-col">
+  <div id="view" class="flex-1 w-full max-w-5xl mx-auto p-4 sm:p-6 lg:p-8"></div>
+</main>
+
+<script src="manifest.js"></script>
+<script src="index-data.js"></script>
+<script src="loader.js"></script>
+<script src="main/000-const-common-improve-your-writing-project-ch.js"></script>
+<script src="main/001-unit-1-work-book-noi-dung-theo-workbook-tran.js"></script>
+<script src="main/002-unit-3-reference-content-reading-vocab-gramm.js"></script>
+<script src="main/003-unit-3-bo-sung-noi-dung-chi-tiet-tu-learner-.js"></script>
+<script src="main/004-mission-1-1-bai-tap-tuong-tac-dang-nhiem-vu.js"></script>
+<script src="main/005-round-map-header-mission-dang-ban-do-chang-m.js"></script>
+<script src="main/006-engine-mission-cau-hinh-theo-lesson-dung-tu-.js"></script>
+<script src="main/007-split-screen-bai-doc-trai-thu-thach-phai.js"></script>
+<script src="main/008-note-tips-unit-3-chi-giu-cac-o-co-trong-sach.js"></script>
+<script src="main/009-unit-1-learner-s-book-noi-dung-theo-sach-die.js"></script>
+<script src="main/010-vins-lms-noi-dung-tuong-tac-unit-1-lmd-id.js"></script>
+<script src="main/011-vins-lms-unit-2-well-being.js"></script>
+<script src="main/012-use-of-english-unit-2-practice-ue-unit-group.js"></script>
+<script src="main/013-luyen-ky-nang-reading-listening-skl.js"></script>
+<script src="main/014-vins-lms-tu-vung-truoc-bai-tap-lmv-id-tu-loa.js"></script>
+<script src="main/015-vins-lms-bam-vao-tu-trong-de-de-xem-nghia-mo.js"></script>
+<script src="main/016-work-book-use-of-english-muc-rieng-tong-hop-.js"></script>
+<script src="main/017-getting-started-gioi-thieu-muc-tieu-chu-de-c.js"></script>
+<script src="main/018-getting-started-khung-trong-cho-unit-2-4-5-6.js"></script>
+<script src="main/019-getting-started-unit-4-science-video-why-doe.js"></script>
+<script src="main/020-work-book-1-1-video-tedx-attitude-matters-mo.js"></script>
+<script src="main/021-flashcards-kieu-quizlet-cho-useful-words-fro.js"></script>
+<script src="main/022-che-do-hoc-kieu-quizlet-learn-match-test-dan.js"></script>
+<script src="main/023-lesson-1-5-facts-opinions-news-detective.js"></script>
+<script src="main/024-lesson-1-6-from-ideas-into-words-presentatio.js"></script>
+<script src="main/025-lesson-1-7-improve-your-writing-email-quest.js"></script>
+<script src="main/026-lesson-1-8-project-challenge-story-from-a-ph.js"></script>
+<script src="main/027-lesson-1-9-autobiography-the-life-story-ques.js"></script>
+<script src="main/028-unit-1-check-your-progress-final-arcade-rout.js"></script>
+<script src="main/029-workbook-unit-1-lesson-1-1-the-learning-lab-.js"></script>
+<script src="main/030-workbook-unit-1-lesson-1-2-the-psychology-la.js"></script>
+<script src="main/031-workbook-unit-1-lesson-1-3-the-role-model-hu.js"></script>
+<script src="main/032-workbook-unit-1-use-of-english-ing-forms-the.js"></script>
+<script src="main/033-workbook-unit-1-use-of-english-present-simpl.js"></script>
+<script src="main/034-workbook-unit-1-lessons-1-4-1-9-mission-keys.js"></script>
+<script src="main/035-workbook-unit-1-lesson-1-7-the-email-quest-m.js"></script>
+<script src="main/036-workbook-unit-1-lesson-1-8-the-life-story-qu.js"></script>
+<script src="main/037-writing-route-writing.js"></script>
+<script src="main/038-use-of-english-kiem-tra-route-uoe-test.js"></script>
+<script src="main/039-reading-practice-route-skills-practice.js"></script>
+<script src="main/040-bo-tro-vins-lms-chia-theo-ky-nang-route-lms.js"></script>
+<script src="main/041-extra-practice-route-lms-extra.js"></script>
+<script src="main/042-nhom-extra-practice.js"></script>
+<script src="main/043-extra-practice-1-reading-q23-40-route-lms-ex.js"></script>
+<script src="main/044-extra-practice-flashcard-collapsible-vocab-l.js"></script>
+<script src="main/045-meme-set-from-reading-skills.js"></script>
+<script src="main/088-che-do-tra-tu-luu-tu-toan-web.js"></script>
+<script src="main/089-flashcard-tu-vung-mat-truoc-tu-mat-sau-phien.js"></script>
+<script src="main/121-xao-trat-tu-cau-hoi-khong-de-cung-dap-an-cun.js"></script>
+<script src="main/121a-hoisted-shared.js"></script>
+<script src="main/180-sao-luu-khoi-phuc.js"></script>
+<script src="main/181-sound-effects.js"></script>
+<script src="main/182-lesson-vocab-pack.js"></script>
+<script src="main/203-fix-map-scroll.js"></script>
+<script>CGE.shuffleNew();CGE.mainReady();</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
