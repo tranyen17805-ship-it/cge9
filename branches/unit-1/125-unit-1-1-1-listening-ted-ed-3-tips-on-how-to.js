@@ -1,0 +1,14 @@
+/* ===== Unit 1 · 1.1 Listening – TED-Ed "3 tips on how to study effectively" (câu hỏi bám transcript) ===== */
+{const d=LMD.sk_ls1a;if(d){const M=(q,o,a,e)=>({q,o,a,e});
+d.tasks=[
+{k:'html',html:'<h4 class="font-bold">🎬 TED-Ed: 3 tips on how to study effectively (5 phút)</h4><p class="mt-2"><b>① Before:</b> How do you usually study for a test? Do you reread your notes, or do you test yourself?</p><p class="mt-2"><b>② While:</b> Watch once for the main idea, then again to answer the questions below. Bật phụ đề tiếng Anh nếu cần.</p><p class="mt-2"><b>③ After:</b> Which of the three techniques will you try this week? Say: “I’m going to … because …”.</p>'},
+{k:'mcq',h:'Watch the video. Choose the correct answer.',items:[
+M('In the 2006 study, how did the two groups of surgical residents differ?',['They had different study materials','One group changed how they studied; materials and study time were the same','One group studied for longer'],1,'Same materials and same amount of time – one small change in how they studied.'),
+M('Where is a new memory first stored for a short time?',['The neocortex','The heart','The hippocampus'],2,'Short-term: hippocampus. Long-term: neocortex.'),
+M('When is knowledge thought to move into long-term storage?',['Between study sessions, and especially during sleep','Only during the exam','While you reread your notes'],0,'Perhaps most crucially during sleep.'),
+M('Why can rereading and highlighting be a problem?',['It takes too little time','It gives a false sense of competence','It makes you forget everything'],1,'The information is in front of you, so you feel you know it.'),
+M('What does the video say about making mistakes while testing yourself?',['They can improve learning in the long term','They waste time','They should be avoided'],0,'Racking your brain activates related knowledge, so the right answer is integrated better.'),
+M('What is “interleaving”?',['Studying one topic for hours','Mixing different subjects or concepts in one session','Studying only at night'],1,'Mixing the deck with multiple subjects.'),
+M('What does “spacing” mean?',['Reviewing across several days','Studying alone in a quiet space','Leaving gaps in your notes'],0,'Spread review across days so the brain can rest and sleep.'),
+M('How did the more successful residents spread their training?',['In a single day','Over four weeks','Over one night'],1,'Cramming in one day vs training spread over four weeks.')]},
+{k:'gap',h:'Complete the sentences with ONE word.',t:'1. Testing yourself forces you to actively {1} knowledge.<br>2. Mixing the concepts you study in one session is called {2}.<br>3. Spacing your review across several {3} allows rest and sleep.<br>4. Cramming the night before means the information won’t last in the {4} term.<br>5. The successful residents’ training was spread over {5} weeks.',a:[['retrieve','recall'],['interleaving'],['days'],['long'],['four','4']]}];}}

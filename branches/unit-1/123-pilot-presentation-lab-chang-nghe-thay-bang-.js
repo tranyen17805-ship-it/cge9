@@ -1,0 +1,7 @@
+/* ===== Pilot: Presentation Lab – chặng nghe thay bằng video TED (Chris Anderson) ===== */
+{const m=MX["0.5"],j=m.steps.findIndex(s=>/secret three/.test(s.n||''));
+if(j>=0){m.steps[j]={i:"🎬",n:"Video: the secret ingredient",t:"book",lbl:"WATCH",sv:"Save",x:2,min:8,
+h:'🎬 Thay cho bài nghe trong sách. Xem video <b>“TED’s secret to great public speaking”</b> (Chris Anderson, ~8 phút): <a href="https://www.ted.com/talks/chris_anderson_ted_s_secret_to_great_public_speaking" target="_blank" rel="noopener" class="underline text-blue-600">mở trên ted.com</a> · <a href="https://www.youtube.com/results?search_query=Chris+Anderson+TED%27s+secret+to+great+public+speaking" target="_blank" rel="noopener" class="underline text-blue-600">tìm trên YouTube</a>. Bật phụ đề tiếng Anh nếu cần.',
+items:[["💎","1","The secret ingredient","According to Chris Anderson, the secret ingredient of a great talk is …",[],".{8,}"],["4️⃣","2","Four ways to make it work","He gives four ways. Note at least three keywords: …",[],".{10,}"],["🔗","3","Link to the 8 rules","Which rule from the lesson matches something in the video? Choose, then explain.",["get it right","practice makes perfect","involve your audience","too much text","make it visual","plan carefully","timing","interruptions"],"because|so|means|shows"],["🎯","4","Your presentation","What will you do differently in your presentation about TEENAGE LIFE?",[],"will|going to|I’ll"]]};
+m.steps[j].items.forEach(it=>{});
+m.mx=m.steps.reduce((a,s)=>a+(s.t==="final"?s.px:(s.t==="order"||s.t==="chk")?s.x:s.items.length*(s.x||0)),0)}}
